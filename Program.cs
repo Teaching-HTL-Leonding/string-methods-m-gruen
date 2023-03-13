@@ -7,6 +7,7 @@
     // I have to use this square bracket thing because we are not allowed to use global variables
     // This will change in the future, but our teacher wants us to use this for now
     // So we can learn how to use methods whit parameters and return values
+    
 
     string choice;
     char item = ' ';
@@ -71,43 +72,38 @@
             System.Console.Write("Enter the length: ");
             length = int.Parse(System.Console.ReadLine()!);
         }
+        if (choice != "Q")
+        {
+            System.Console.Write("The result is: ");
+        }
 
         switch (choice)
         {
             case "1":
-                System.Console.Write("The result is: ");
                 System.Console.Write(Contains(text, item));
                 break;
             case "2":
-                System.Console.Write("The result is: ");
                 System.Console.Write(IndexOf(text, item));
                 break;
             case "3":
-                System.Console.Write("The result is: ");
                 System.Console.Write(LastIndexOf(text, item));
                 break;
             case "4":
-                System.Console.Write("The result is: ");
                 System.Console.Write(TrimStart(text, item));
                 break;
             case "5":
-                System.Console.Write("The result is: ");
                 System.Console.Write(TrimEnd(text, item));
                 break;
             case "6":
-                System.Console.Write("The result is: ");
                 System.Console.Write(Trim(text, item));
                 break;
             case "7":
-                System.Console.Write("The result is: ");
                 System.Console.Write(Substring(text, start, length));
                 break;
             case "8":
-                System.Console.Write("The result is: ");
                 System.Console.Write(Remove(text, start, length));
                 break;
             case "9":
-                System.Console.Write("The result is: ");
                 System.Console.Write(Replace(text, item, newItem));
                 break;
             case "Q":
@@ -119,6 +115,7 @@
         }
     }
     while (choice != "Q");
+
 }
 #endregion
 
@@ -303,5 +300,5 @@ string Replace(string text, char oldItem, char newItem)
 {
     return text.Replace(oldItem, newItem);
 }
-*/
+*/ 
 #endregion
